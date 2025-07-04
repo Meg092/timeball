@@ -11,8 +11,8 @@ class TaskGressView extends GetView<TaskGressLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.daugherty.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.schoen.value
+              ? const CircularProgressIndicator(color: Colors.orangeAccent)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class TaskGressView extends GetView<TaskGressLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.sknjfqlm();
+              controller.ouwfqsn();
             },
             icon: const Icon(
               Icons.restart_alt,

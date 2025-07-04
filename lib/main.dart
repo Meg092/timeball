@@ -6,9 +6,12 @@ import 'package:today_task/pages/task_add/task_add_binding.dart';
 import 'package:today_task/pages/task_add/task_add_view.dart';
 import 'package:today_task/pages/task_details/task_details_binding.dart';
 import 'package:today_task/pages/task_details/task_details_view.dart';
+import 'package:today_task/pages/task_gress/task_gress_binding.dart';
+import 'package:today_task/pages/task_gress/task_gress_view.dart';
 import 'package:today_task/pages/task_main/task_main_binding.dart';
 import 'package:today_task/pages/task_main/task_main_view.dart';
 import 'package:today_task/pages/task_netup/task_netup_binding.dart';
+import 'package:today_task/pages/task_netup/task_netup_tool.dart';
 import 'package:today_task/pages/task_netup/task_netup_view.dart';
 import 'package:today_task/pages/task_setting/task_setting_binding.dart';
 import 'package:today_task/pages/task_setting/task_setting_view.dart';
@@ -43,7 +46,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: TimeBall,
-      initialRoute: '/task_main',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -95,9 +98,11 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> TimeBall = [
+  GetPage(name: '/', page: () => const TaskGressView(), binding: TaskGressBinding()),
   GetPage(name: '/task_main', page: () => const TaskMainPage(), binding: TaskMainBinding()),
   GetPage(name: '/task_add', page: () => TaskAddPage(), binding: TaskAddBinding()),
   GetPage(name: '/task_details', page: () => TaskDetailsPage(), binding: TaskDetailsBinding()),
+  GetPage(name: '/task_tools', page: () => TaskNetupTool()),
   GetPage(name: '/task_netup', page: () => TaskNetupView(), binding: TaskNetupBinding()),
   GetPage(name: '/task_setting', page: () => TaskSettingPage(), binding: TaskSettingBinding()),
 ];

@@ -6,7 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../task_gress/task_gress_logic.dart';
 
 
-class TimeOutReload extends GetView<TaskGressLogic> {
+class TaskNetupTool extends GetView<TaskGressLogic> {
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class TimeOutReload extends GetView<TaskGressLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.ytsuz.value)),
+              url: WebUri.uri(Uri.parse(controller.zkpvl.value)),
               timeoutInterval:10
             ),
             initialSettings: InAppWebViewSettings(
